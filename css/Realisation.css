@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+/* -------------------------------------------------------------------------------------------------- */
+/* Burger menu */
+
+.container {
+  max-width: 1050px;
+  width: 100%;
+
+}
+
+.navbar {
+  background: #FFFFFF;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+}
+
+.navbar .nav-container a:hover{
+  font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  transform: translateY(-150%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+/* ---------------------------------------------------------------------- Presentation --------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------- Footer ------------------------------------------------------------------------------ */
+.hr {
+  border: none;
+  height: 1px;
+  background: red;
+}
+
+@media (max-width: 570px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer1, .footer2 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 571px) {
+  .footer1, .footer2 {
+    width: 50%;
+  }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+}
+
+.footer1 {
+  position: relative;
+  left: 0;
+  text-align: center;
+}
+
+.footer2 {
+  position: relative;
+  right: 0;
+  text-align: center;
+}
+
+.listFooter {
+  list-style: none;
+}
+
+.liFooter {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: black;
+}
+
+.button {
+  width: 175px;
+  background-color: red; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Supprime la bordure par défaut du bouton */
+  padding: 15px 32px; /* Espace entre le texte du bouton et sa bordure */
+  border-radius: 30px; /* Rend les coins du bouton arrondis */
+  cursor: pointer; /* Change le curseur en une main lorsque vous survolez le bouton */
+}
+
+.button:hover {
+  background-color: #888888; /* Change la couleur de fond du bouton lorsque vous survolez le bouton */
+  color: white;
+}
